@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Natavan Kimya Müəlliməsi</title>
+<!-- Font Awesome üçün (YouTube ikonu) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+  .youtube-button {
+    position: fixed;
+    bottom: 60px;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 25px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    animation: slideUp 0.7s ease-out;
+  }
+
+  .youtube-button i {
+    margin-right: 6px;
+    font-size: 15px;
+  }
+
+  .youtube-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<!-- Font Awesome ikonları üçün -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+<style>
+  .floating-button {
+    position: fixed;
+    left: 20px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.6s ease;
+  }
+
+  .floating-button i {
+    margin-right: 6px;
+    font-size: 15px;
+  }
+
+  .floating-button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  }
+
+  .youtube-btn {
+    bottom: 20px;
+    background: #ff0000;
+    color: white;
+  }
+
+  .instagram-btn {
+    bottom: 110px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: white;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<!-- Instagram düyməsi -->
+<a href="https://www.instagram.com/Alakberofhh" target="_blank" class="floating-button instagram-btn">
+  <i class="fab fa-instagram"></i> Instagram
+</a>
+
+<!-- YouTube linki ilə düymə -->
+<a href="https://www.youtube.com/@Alakberofhh" target="_blank" class="youtube-button">
+  <i class="fab fa-youtube"></i> YouTube
+</a>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap');
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5faff;
+    color: #222;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    background: #004080;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 12px rgb(0 0 0 / 0.1);
+  }
+  header h1 {
+    color: #fff;
+    font-weight: 900;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  nav a {
+    color: #fff;
+    font-weight: 600;
+    margin-left: 30px;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  nav a.active,
+  nav a:hover {
+    color: #ffb703;
+  }
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background: #ffb703;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+  }
+  nav a.active::after,
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  /* Banner */
+  .banner {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    color: #fff;
+  }
+  .banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 64, 128, 0.75);
+    z-index: 1;
+  }
+  .banner-content {
+    position: relative;
+    max-width: 700px;
+    z-index: 2;
+  }
+  .banner-content h2 {
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.7);
+  }
+  .banner-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+  .banner-content button {
+    background: #ffb703;
+    color: #004080;
+    border: none;
+    padding: 18px 45px;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 18px rgba(255, 183, 3, 0.7);
+    transition: all 0.3s ease;
+  }
+  .banner-content button:hover {
+    background: #e6a600;
+    box-shadow: 0 6px 26px rgba(230, 166, 0, 0.85);
+    transform: scale(1.07);
+  }
+
+  /* Services */
+  .services {
+    max-width: 1100px;
+    margin: 90px auto 70px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 30px 25px;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 0.1);
+    flex: 1 1 320px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  .service-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 22px 44px rgb(0 0 0 / 0.15);
+  }
+  .service-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #004080;
+    margin-bottom: 18px;
+  }
+  .service-card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Resources Section */
+  .resources {
+    background: #e7f0ff;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  .resources h2 {
+    font-weight: 900;
+    font-size: 36px;
+    color: #004080;
+    margin-bottom: 45px;
+  }
+  .resource-list {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 25px;
+  }
+  .resource-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px 25px;
+    box-shadow: 0 10px 22px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .resource-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 18px 40px rgb(0 0 0 / 0.15);
+  }
+  .resource-card h4 {
+    color: #0071e3;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .resource-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* Testimonials */
+  .testimonials {
+    max-width: 1000px;
+    margin: 80px auto 70px;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .testimonials h2 {
+    font-weight: 900;
+    font-size: 36px;
+    color: #004080;
+    margin-bottom: 40px;
+  }
+  .testimonial-card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 25px 30px;
+    box-shadow: 0 14px 28px rgb(0 0 0 / 0.1);
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-style: italic;
+    color: #333;
+  }
+  .testimonial-author {
+    margin-top: 18px;
+    font-weight: 700;
+    color: #004080;
+    font-style: normal;
+  }
+
+  /* Contact Section */
+  .contact {
+    background: #004080;
+    color: #fff;
+    padding: 70px 20px 80px;
+    text-align: center;
+  }
+  .contact h2 {
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 35px;
+  }
+  form {
+    max-width: 520px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 14px 12px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    border: none;
+    font-size: 16px;
+    resize: vertical;
+  }
+  input:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #ffb703;
+  }
+  button[type="submit"] {
+    width: 100%;
+    background: #ffb703;
+    border: none;
+    border-radius: 15px;
+    padding: 17px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #004080;
+    cursor: pointer;
+    box-shadow: 0 6px 22px rgba(255, 183, 3, 0.75);
+    transition: all 0.3s ease;
+  }
+  button[type="submit"]:hover {
+    background: #e6a600;
+    box-shadow: 0 8px 26px rgba(230, 166, 0, 0.9);
+    transform: scale(1.05);
+  }
+
+  /* Footer */
+  footer {
+    background: #002a5b;
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+    padding: 18px 10px;
+    user-select: none;
+  }
+
+  /* Responsive */
+  @media(max-width: 850px) {
+    .services {
+      flex-direction: column;
+      align-items: center;
+    }
+    nav a {
+      margin-left: 15px;
+      font-size: 14px;
+    }
+  }
+  @media(max-width: 500px) {
+    header {
+      padding: 12px 20px;
+    }
+    .banner-content h2 {
+      font-size: 32px;
+    }
+    .banner-content p {
+      font-size: 16px;
+    }
+    .banner-content button {
+      padding: 14px 30px;
+      font-size: 16px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header id="header">
+  <h1 onclick="window.scrollTo({top:0,behavior:'smooth'})">Natavan Kimya Müəlliməsi</h1>
+  <nav>
+    <a href="#home" class="active">Ana Səhifə</a>
+    <a href="#services">Xidmətlər</a>
+    <a href="#resources">Resurslar</a>
+    <a href="#testimonials">Rəylər</a>
+    <a href="#contact">Əlaqə</a>
+  </nav>
+</header>
+
+<section class="banner" id="home" aria-label="Ana Səhifə Banner">
+  <div class="banner-content">
+    <h2>Kimya dərsləri ilə gələcəyini parlaq et!</h2>
+    <p>6 illik təcrübə, BDU məzunu, fərdi və qrup dərsləri.</p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Əlaqə</button>
+  <!-- Yeni əlavə - Animasiya ilə görünən link blokları -->
+<style>
+  .info-link {
+    text-align: center;
+    color: #fdd835;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease forwards;
+  }
+
+  .info-link img {
+    width: 24px;
+    height: 24px;
+    filter: drop-shadow(0 0 2px #fdd835);
+    display: block;
+    margin: 0 auto 5px;
+  }
+
+  .info-container {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 10px;
+    background: transparent;
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+
+<div class="info-container">
+  <a href="html/nihad" class="info-link" style="animation-delay: 0.2s;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" />
+    Bilik N1
+  </a>
+  <a href="html/nihad" class="info-link" style="animation-delay: 0.4s;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    Kimya Testlər
+  </a>
+</div></div>
+</section>
+
+<section class="services" id="services" aria-label="Xidmətlər">
+  <div class="service-card">
+    <h3>Fərdi Dərslər</h3>
+    <p>Şagirdin səviyyəsinə uyğun, fərdi diqqət və rahat öyrənmə mühiti.</p>
+  </div>
+  <div class="service-card">
+    <h3>Qrup Dərsləri</h3>
+    <p>5-8 nəfərlik qruplar üçün əlverişli qiymətlər və səmərəli tədris.</p>
+  </div>
+  <div class="service-card">
+    <h3>Online Dərslər</h3>
+    <p>İstənilən yerdən rahatlıqla qoşulmaq imkanı, interaktiv metodlar.</p>
+  </div>
+</section>
+
+<section class="resources" id="resources" aria-label="Tədris Resursları">
+  <h2>Tədris Resursları</h2>
+  <div class="resource-list">
+    <div class="resource-card">
+      <h4>Video Dərslər</h4>
+      <div id="videoDersler" style="cursor:pointer;">Video Dərslər</div>
+      <p>Ən çətin mövzulara aydın və sadə izahlar.</p>
+    </div>
+    <div class="resource-card">
+      <h4>Yazılı Materiallar</h4><div id="yaziliMetreallar" style="cursor:pointer;">Yazılı Mətəariallar</div>
+      <p>Tapşırıqlar, testlər və ətraflı mövzu izahları.</p>
+    </div>
+    <div class="resource-card">
+      <h4>Əlavə Dəstək</h4>
+      <div id="elaveDestek" style="cursor:pointer;">Əlavə Dəstək</div>
+      <p>Sual-cavab sessiyaları və fərdi məsləhətlər.</p>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials" id="testimonials" aria-label="Rəylər">
+  <h2>Şagirdlərin Rəyləri</h2><div class="review-button">
+  <!-- Yorum yaz düyməsi -->
+<button id="openFormBtn" style="padding:12px 24px; background:linear-gradient(135deg, #4e54c8, #8f94fb); color:#fff; border:none; border-radius:8px; cursor:pointer; font-size:16px; font-weight:bold; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">Yorum yaz</button>
+
+<!-- Rəylərin göstərildiyi yer -->
+<div id="reviewList" style="margin-top:20px;"></div>
+
+<!-- Form konteyneri -->
+<div id="reviewFormContainer" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.6); justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:#fff; padding:25px; border-radius:10px; width:90%; max-width:420px; box-shadow:0 0 20px rgba(0,0,0,0.3); font-family:'Segoe UI', sans-serif;">
+    <h3 style="margin-top:0; margin-bottom:20px; text-align:center; color:#333;">Yorum yaz</h3>
+    <form id="reviewForm">
+      <input type="text" id="name" placeholder="Adınız" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:7px; font-size:15px;"/>
+      <textarea id="comment" placeholder="Rəyinizi yazın" required style="width:100%; padding:12px; height:100px; margin-bottom:15px; border:1px solid #ccc; border-radius:7px; font-size:15px;"></textarea>
+      <div style="text-align:right;">
+        <button type="submit" style="background:linear-gradient(135deg, #4e54c8, #8f94fb); color:#fff; border:none; padding:10px 20px; border-radius:7px; font-size:15px; cursor:pointer; font-weight:bold;">Göndər</button>
+        <button type="button" id="closeFormBtn" style="margin-left:10px; padding:10px 20px; background:#e0e0e0; color:#333; border:none; border-radius:7px; font-size:15px; cursor:pointer;">Bağla</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  const openFormBtn = document.getElementById('openFormBtn');
+  const reviewFormContainer = document.getElementById('reviewFormContainer');
+  const closeFormBtn = document.getElementById('closeFormBtn');
+  const reviewForm = document.getElementById('reviewForm');
+  const reviewList = document.getElementById('reviewList');
+
+  openFormBtn.onclick = () => reviewFormContainer.style.display = 'flex';
+  closeFormBtn.onclick = () => reviewFormContainer.style.display = 'none';
+
+  function showReviews() {
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviewList.innerHTML = '';
+    reviews.forEach(r => {
+      const div = document.createElement('div');
+      div.style.border = "1px solid #ddd";
+      div.style.padding = "12px";
+      div.style.marginBottom = "12px";
+      div.style.borderRadius = "7px";
+      div.style.background = "#fdfdfd";
+      div.style.boxShadow = "0 2px 6px rgba(0,0,0,0.05)";
+      div.innerHTML = `<strong style="color:#4e54c8;">${r.name}</strong><p style="margin-top:5px;">${r.comment}</p>`;
+      reviewList.appendChild(div);
+    });
+  }
+
+  window.onload = showReviews;
+
+  reviewForm.onsubmit = e => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const comment = document.getElementById('comment').value.trim();
+    if (!name || !comment) {
+      alert('Bütün sahələri doldurun!');
+      return;
+    }
+    const reviews = JSON.parse(localStorage.getItem('reviews')) || [];
+    reviews.push({name, comment});
+    localStorage.setItem('reviews', JSON.stringify(reviews));
+    reviewForm.reset();
+    reviewFormContainer.style.display = 'none';
+    showReviews();
+  }
+</script>
+</div>
+  <div class="testimonial-card">
+    <p>"Natavan müəllimənin dərsləri sayəsində kimyaya marağım artdı və imtahandan yüksək qiymət aldım!"</p>
+    <div class="testimonial-author">— Günel M.</div>
+  </div>
+  <div class="testimonial-card">
+    <p>"İzahı çox sadə və anlaşıqlıdır, online dərslər çox rahatdır."</p>
+    <div class="testimonial-author">— Ramil H.</div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-label="Əlaqə">
+  <h2>Əlaqə</h2>
+  
+<form action="https://formsubmit.co/nihadrahib04@gmail.com" method="POST">
+  <input type="text" name="name" placeholder="Adınız" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <textarea name="message" placeholder="Mesajınız" required></textarea>
+  <button type="submit">Göndər</button>
+</form>
+  
+</section>
+
+<footer>
+  &copy; 2025 Natavan Kimya Müəlliməsi. Bütün hüquqlar qorunur.
+</footer>
+
+<script>
+  // Navigation active link highlight
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let fromTop = window.scrollY + 80;
+    navLinks.forEach(link => {
+      const section = document.querySelector(link.hash);
+      if(section.offsetTop <= fromTop && (section.offsetTop + section.offsetHeight) > fromTop){
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+      }
+    });
+  });
+
+  // Simple contact form handler (mock)
+  function submitForm(e){
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name && email && message){
+      alert(`Təşəkkürlər, ${name}! Mesajınız göndərildi.`);
+      e.target.reset();
+    } else {
+      alert('Zəhmət olmasa bütün xanaları doldurun.');
+    }
+    return false;
+  }
+</script>
+<!-- Modern Chatbot Button and Box -->
+<style>
+  /* Chatbot düyməsi */
+  .chatbot-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, #00b4d8, #0077b6);
+    color: white;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.4);
+    font-size: 26px;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+  }
+
+  .chatbot-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 30px rgba(0, 123, 255, 0.6);
+  }
+
+  .chatbot-box {
+    position: fixed;
+    bottom: 180px;
+    right: 25px;
+    width: 320px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    z-index: 2000;
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .chatbot-header {
+    background: #0077b6;
+    color: #fff;
+    padding: 14px 18px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .chatbot-messages {
+    padding: 14px 18px;
+    height: 220px;
+    overflow-y: auto;
+    font-size: 14px;
+    background: #f0f9ff;
+  }
+
+  .chatbot-input {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+
+  .chatbot-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .chatbot-input button {
+    background: #00b4d8;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+  }
+
+  .chatbot-input button:hover {
+    background: #0077b6;
+  }
+</style>
+
+<!-- Font Awesome ikon üçün (istəyə bağlı) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Buton -->
+<button class="chatbot-btn" onclick="toggleChat()">
+  <i class="fas fa-comments"></i>
+</button>
+
+<!-- Qutu -->
+<div class="chatbot-box" id="chatBox">
+  <div class="chatbot-header">ChatBot</div>
+  <div class="chatbot-messages" id="chatMessages">
+    <p><strong>Bot:</strong> Salam! Necə kömək edə bilərəm?</p>
+  </div>
+  <div class="chatbot-input">
+    <input type="text" id="chatInput" placeholder="Mesaj yazın..." />
+    <button onclick="sendMessage()">Göndər</button>
+  </div>
+</div>
+
+<script>
+  function toggleChat() {
+    const chatBox = document.getElementById('chatBox');
+    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+    chatBox.style.flexDirection = 'column';
+  }
+
+  function sendMessage() {
+    const input = document.getElementById('chatInput');
+    const messages = document.getElementById('chatMessages');
+    const msg = input.value.trim();
+    if (msg) {
+      const userMsg = document.createElement('p');
+      userMsg.innerHTML = `<strong>Siz:</strong> ${msg}`;
+      messages.appendChild(userMsg);
+
+      const botReply = document.createElement('p');
+      botReply.innerHTML = `<strong>Bot:</strong> Sualınızı aldım. Təşəkkür edirəm!`;
+      messages.appendChild(botReply);
+
+      messages.scrollTop = messages.scrollHeight;
+      input.value = '';
+    }
+  }
+</script>
+<!-- WhatsApp Button -->
+<style>
+  .whatsapp-btn {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .whatsapp-btn:hover {
+    background: #1ebe5b;
+    transform: scale(1.1);
+  }
+</style>
+
+<!-- Font Awesome ikonları (əgər əvvəlcə əlavə etməmisənsə) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Button Element -->
+<a href="https://wa.me/994517170017" target="_blank" class="whatsapp-btn" title="WhatsApp-a yaz">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<style>
+  .info-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    padding: 10px;
+    background: transparent;
+    margin-top: 10px;
+  }
+
+  .info-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #fdd835;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 1s ease forwards;
+  }
+
+  .info-link:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+
+  .info-link:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+
+  .info-link img {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 5px;
+    filter: drop-shadow(0 0 2px #fdd835);
+  }
+
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<script>
+	
+  document.getElementById('videoDersler').onclick = function() {
+    window.location.href = 'https://www.youtube.com/';
+  };
+
+  document.getElementById('yaziliMetreallar').onclick = function() {
+    window.location.href = 'https://chat.whatsapp.com/invite/qrYourGroupInviteCode'; // Öz linkini əlavə et
+  };
+
+  document.getElementById('elaveDestek').onclick = function() {
+    window.location.href = 'tel:+994517170017'; // Nömrəni dəyiş
+  };
+</script>
+
+<script>
+  const whatsappIcon = document.getElementById('whatsapp-icon');
+  const openBotBtn = document.getElementById('open-bot');
+  const closeBotBtn = document.getElementById('close-bot');
+
+  openBotBtn.addEventListener('click', () => {
+    whatsappIcon.style.display = 'none';  // WhatsApp gizlənsin
+    // Burada botu açmaq üçün kodunu əlavə et
+  });
+
+  closeBotBtn.addEventListener('click', () => {
+    whatsappIcon.style.display = 'block';  // WhatsApp görünsün
+    // Burada botu bağlamaq üçün kodunu əlavə et
+  });
+</script>
+</body>
+
+
+</html> 
