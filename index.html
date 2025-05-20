@@ -2,8 +2,11 @@
 <html lang="az">
 <head>
 <meta charset="UTF-8" />
+<meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Natavan Kimya Müəlliməsi</title>
+
+
 <!-- Font Awesome üçün (YouTube ikonu) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
@@ -105,12 +108,12 @@
 </style>
 
 <!-- Instagram düyməsi -->
-<a href="https://www.instagram.com/Alakberofhh" target="_blank" class="floating-button instagram-btn">
+<a href="https://www.instagram.com/kimya_natavan_muradova?igsh=azY1dHhzMzlpeWlq" target="_blank" class="floating-button instagram-btn">
   <i class="fab fa-instagram"></i> Instagram
 </a>
 
 <!-- YouTube linki ilə düymə -->
-<a href="https://www.youtube.com/@Alakberofhh" target="_blank" class="youtube-button">
+<a href="https://youtube.com/@natavan_muradova_kimya?si=VOVUb7_NNxTDhT-8" target="_blank" class="youtube-button">
   <i class="fab fa-youtube"></i> YouTube
 </a>
 <style>
@@ -118,6 +121,7 @@
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
+  
   body {
     font-family: 'Poppins', sans-serif;
     background: #f5faff;
@@ -425,6 +429,7 @@
   }
 </style>
 </head>
+
 <body>
 
 <header id="header">
@@ -483,11 +488,11 @@
 </style>
 
 <div class="info-container">
-  <a href="html/nihad" class="info-link" style="animation-delay: 0.2s;">
+  <a href="https://t.me/Bilikn1" class="info-link" style="animation-delay: 0.2s;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram" />
     Bilik N1
   </a>
-  <a href="html/nihad" class="info-link" style="animation-delay: 0.4s;">
+  <a href="https://t.me nihad" class="info-link" style="animation-delay: 0.4s;">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
     Kimya Testlər
   </a>
@@ -514,17 +519,17 @@
   <div class="resource-list">
     <div class="resource-card">
       <h4>Video Dərslər</h4>
-      <div id="videoDersler" style="cursor:pointer;">Video Dərslər</div>
+      <div id="videoDersler" style="cursor:pointer;"> YouTube kanalına keçid et </div>
       <p>Ən çətin mövzulara aydın və sadə izahlar.</p>
     </div>
     <div class="resource-card">
-      <h4>Yazılı Materiallar</h4><div id="yaziliMetreallar" style="cursor:pointer;">Yazılı Mətəariallar</div>
-      <p>Tapşırıqlar, testlər və ətraflı mövzu izahları.</p>
+      <h4>Video və yazılı materiallar</h4><div id="TestVideoları" style="cursor:pointer;"> Yazıya toxunaraq keçid et</div>
+      <p>“Müzakirələr buradadır, biliklər paylaşılır! Bu mətnə toxunaraq onlayn kanala qoşul — testlər, tapşırıqlar və fikir mübadiləsi səni gözləyir!”</p>
     </div>
     <div class="resource-card">
-      <h4>Əlavə Dəstək</h4>
-      <div id="elaveDestek" style="cursor:pointer;">Əlavə Dəstək</div>
-      <p>Sual-cavab sessiyaları və fərdi məsləhətlər.</p>
+      <h4>Online Sınaq</h4>
+      <div id="OnlineSınaq" style="cursor:pointer;">Testlərə Başla</div>
+      <p>“Biliklər sınaqdadır, nəticələr müəllimin nəzarətində! Bu mətnə toxunaraq testləri başlat, cavablar avtomatik yoxlanacaq və müəlliminə təqdim olunacaq.”</p>
     </div>
   </div>
 </section>
@@ -547,7 +552,9 @@
       <div style="text-align:right;">
         <button type="submit" style="background:linear-gradient(135deg, #4e54c8, #8f94fb); color:#fff; border:none; padding:10px 20px; border-radius:7px; font-size:15px; cursor:pointer; font-weight:bold;">Göndər</button>
         <button type="button" id="closeFormBtn" style="margin-left:10px; padding:10px 20px; background:#e0e0e0; color:#333; border:none; border-radius:7px; font-size:15px; cursor:pointer;">Bağla</button>
+        
       </div>
+      
     </form>
   </div>
 </div>
@@ -610,9 +617,10 @@
 <section class="contact" id="contact" aria-label="Əlaqə">
   <h2>Əlaqə</h2>
   
-<form action="https://formsubmit.co/nihadrahib04@gmail.com" method="POST">
+<form action="https://formsubmit.co/natavanmuradovakimya@gmail.com" method="POST">
   <input type="text" name="name" placeholder="Adınız" required>
   <input type="email" name="email" placeholder="Email" required>
+  <input type="Əlaqə Nömrəsi" name="Əlaqə Nömrəsi" placeholder="Əlaqə Nömrəs" required>
   <textarea name="message" placeholder="Mesajınız" required></textarea>
   <button type="submit">Göndər</button>
 </form>
@@ -642,9 +650,10 @@
     e.preventDefault();
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
+    const telefon= document.getElementById('telefon').value.trim();
     const message = document.getElementById('message').value.trim();
 
-    if(name && email && message){
+    if(name && email && message && telefon){
       alert(`Təşəkkürlər, ${name}! Mesajınız göndərildi.`);
       e.target.reset();
     } else {
@@ -743,47 +752,90 @@
 <!-- Font Awesome ikon üçün (istəyə bağlı) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<!-- Buton -->
-<button class="chatbot-btn" onclick="toggleChat()">
-  <i class="fas fa-comments"></i>
+<style>
+  #onlineTestBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Mavi və bənövşəyi qarışıq */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(101, 71, 255, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    transition: transform 0.3s ease;
+  }
+  #onlineTestBtn:hover {
+    transform: scale(1.1);
+  }
+
+  #onlineTestPanel {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 320px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 25px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: #2575fc;
+    cursor: pointer;
+    user-select: none;
+    
+    transform: translateY(150%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    z-index: 9999;
+  }
+  #onlineTestPanel.active {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* SVG ikonun rəngi */
+  #onlineTestBtn svg {
+    fill: white;
+    width: 32px;
+    height: 32px;
+  }
+</style>
+
+<button id="onlineTestBtn" title="Onlayn Testə Keçid">
+  <!-- Quiz/Test kitab və yoxlama işarəsi SVG -->
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+    <path d="M7 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-6-6H7zm6 7h4.5L13 3.5V9zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/>
+  </svg>
 </button>
 
-<!-- Qutu -->
-<div class="chatbot-box" id="chatBox">
-  <div class="chatbot-header">ChatBot</div>
-  <div class="chatbot-messages" id="chatMessages">
-    <p><strong>Bot:</strong> Salam! Necə kömək edə bilərəm?</p>
-  </div>
-  <div class="chatbot-input">
-    <input type="text" id="chatInput" placeholder="Mesaj yazın..." />
-    <button onclick="sendMessage()">Göndər</button>
-  </div>
+<div id="onlineTestPanel" title="Test səhifəmizə keçid edin">
+  Onlayn Testə Keçmək üçün buraya klikləyin<br>
+  <small style="font-weight:400; font-size:14px; color:#999; margin-top:10px; display:block;"> Giriş Parolun Müəllimə ilə əlaqə saxlayaraq əldə edə bilərsiniz.</small>
 </div>
 
 <script>
-  function toggleChat() {
-    const chatBox = document.getElementById('chatBox');
-    chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
-    chatBox.style.flexDirection = 'column';
-  }
+  const btn = document.getElementById('onlineTestBtn');
+  const panel = document.getElementById('onlineTestPanel');
 
-  function sendMessage() {
-    const input = document.getElementById('chatInput');
-    const messages = document.getElementById('chatMessages');
-    const msg = input.value.trim();
-    if (msg) {
-      const userMsg = document.createElement('p');
-      userMsg.innerHTML = `<strong>Siz:</strong> ${msg}`;
-      messages.appendChild(userMsg);
+  btn.addEventListener('click', () => {
+    panel.classList.toggle('active');
+  });
 
-      const botReply = document.createElement('p');
-      botReply.innerHTML = `<strong>Bot:</strong> Sualınızı aldım. Təşəkkür edirəm!`;
-      messages.appendChild(botReply);
+  panel.addEventListener('click', () => {
+    window.open('https://forms.gle/Pm8RF8gczB8TFNEz8');
+  });
 
-      messages.scrollTop = messages.scrollHeight;
-      input.value = '';
+  document.addEventListener('click', (e) => {
+    if (!btn.contains(e.target) && !panel.contains(e.target)) {
+      panel.classList.remove('active');
     }
-  }
+  });
 </script>
 <!-- WhatsApp Button -->
 <style>
@@ -813,11 +865,12 @@
   }
 </style>
 
+
 <!-- Font Awesome ikonları (əgər əvvəlcə əlavə etməmisənsə) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <!-- Button Element -->
-<a href="https://wa.me/994517170017" target="_blank" class="whatsapp-btn" title="WhatsApp-a yaz">
+<a href="https://wa.me/994708348660" target="_blank" class="whatsapp-btn" title="WhatsApp-a yaz">
   <i class="fab fa-whatsapp"></i>
 </a>
 <style>
@@ -869,15 +922,15 @@
 <script>
 	
   document.getElementById('videoDersler').onclick = function() {
-    window.location.href = 'https://www.youtube.com/';
+    window.location.href = 'https://youtube.com/@natavan_muradova_kimya?si=VOVUb7_NNxTDhT-8/';
   };
 
-  document.getElementById('yaziliMetreallar').onclick = function() {
-    window.location.href = 'https://chat.whatsapp.com/invite/qrYourGroupInviteCode'; // Öz linkini əlavə et
+  document.getElementById('TestVideoları').onclick = function() {
+    window.location.href = 'https://t.me/kimyatestleri'; // Öz linkini əlavə et
   };
 
-  document.getElementById('elaveDestek').onclick = function() {
-    window.location.href = 'tel:+994517170017'; // Nömrəni dəyiş
+  document.getElementById('OnlineSınaq').onclick = function() {
+    window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdfWm95UnlfeXT-ZcnvNbHSccN4g7jeEHu38GX6Ru6_JznCpg/viewform'; // Nömrəni dəyiş
   };
 </script>
 
@@ -896,6 +949,7 @@
     // Burada botu bağlamaq üçün kodunu əlavə et
   });
 </script>
+
 </body>
 
 
