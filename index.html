@@ -953,24 +953,107 @@
     // Burada botu bağlamaq üçün kodunu əlavə et
   });
 </script>
+<!-- ✨ Ultra Premium WhatsApp Popup -->
+<div id="popupReklam" style="
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+">
 
-	<!-- Popup Reklam Div-i -->
-<div id="reklam" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
-  <div id="closeBtn" style="position:absolute; top:20px; right:20px; font-size:28px; color:white; background:rgba(0,0,0,0.5); border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center; cursor:pointer;">×</div>
-  <img src="https://i.imgur.com/Ec4ovEh.png" alt="Reklam" style="max-width:90%; max-height:70%; border-radius:10px; box-shadow:0 0 15px 5px rgba(255,255,255,0.8);">
-  <a href="https://wa.me/994708348660" target="_blank" style="margin-top:20px; background-color:#f39c12; color:white; padding:14px 28px; font-size:20px; font-weight:700; border-radius:30px; text-decoration:none; box-shadow:0 0 10px rgba(0,0,0,0.4);">Əla Təklif! Dərhal Əlaqə Saxla 🚀</a>
+  <!-- Bağlama düyməsi -->
+  <div id="closePopup" style="
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10000;
+    color: #333;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  " onmouseenter="this.style.background='#ff4d4d'; this.style.color='#fff';" onmouseleave="this.style.background='rgba(255,255,255,0.8)'; this.style.color='#333';">×</div>
+
+  <!-- Reklam qutusu -->
+  <div style="
+    background: linear-gradient(135deg, #fff8e1, #ffe57f);
+    padding: 32px;
+    border-radius: 24px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.5);
+    border: 2px solid gold;
+    animation: popZoom 0.6s ease forwards;
+  ">
+    <img src="https://i.imgur.com/Ec4ovEh.png" style="width: 100%; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 0 12px rgba(0,0,0,0.2);">
+
+    <h2 style="color: #b27300; font-size: 24px; margin-bottom: 10px; animation: slideDown 0.8s ease;">Eksklüziv Təklif Sizə!</h2>
+    <p style="color: #6d4c00; font-size: 15px; margin-bottom: 22px;">WhatsApp-la indi yazın, fürsəti ilk siz qazanın!</p>
+
+    <a href="https://wa.me/994708348660" target="_blank" style="
+      background: linear-gradient(to right, #25D366, #128C7E);
+      color: white;
+      padding: 16px 26px;
+      border-radius: 50px;
+      font-size: 17px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 0 30px rgba(37,211,102,0.6);
+      transition: all 0.3s ease;
+    " onmouseenter="this.style.transform='scale(1.08)';" onmouseleave="this.style.transform='scale(1)';">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" style="width: 24px; height: 24px;">
+      WhatsApp-la Əlaqə
+    </a>
+  </div>
 </div>
 
+<!-- JavaScript və Animasiya -->
 <script>
   window.onload = function() {
     setTimeout(() => {
-      document.getElementById('reklam').style.display = 'flex';
+      document.getElementById("popupReklam").style.display = "flex";
     }, 3000);
   };
-  
-  document.getElementById('closeBtn').addEventListener('click', () => {
-    document.getElementById('reklam').style.display = 'none';
-  });
+
+  document.getElementById("closePopup").onclick = function() {
+    const popup = document.getElementById("popupReklam");
+    popup.style.animation = 'fadeOut 0.5s ease forwards';
+    setTimeout(() => popup.style.display = "none", 500);
+  };
+
+  const styleTag = document.createElement('style');
+  styleTag.innerHTML = `
+    @keyframes fadeOut {
+      from {opacity: 1;}
+      to {opacity: 0;}
+    }
+    @keyframes popZoom {
+      0% {transform: scale(0.7); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+    @keyframes slideDown {
+      0% {transform: translateY(-30px); opacity: 0;}
+      100% {transform: translateY(0); opacity: 1;}
+    }
+  `;
+  document.head.appendChild(styleTag);
 </script>
 </body>
 
