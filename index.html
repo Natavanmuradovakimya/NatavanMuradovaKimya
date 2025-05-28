@@ -1055,6 +1055,31 @@
   `;
   document.head.appendChild(styleTag);
 </script>
+	<script>
+  window.onload = function() {
+    setTimeout(() => {
+      document.getElementById("popupReklam").style.display = "flex";
+      document.body.style.overflow = "hidden";
+      
+      // Bu hissə: digər butonu gizlədir
+      const testBtn = document.getElementById("onlineTestBtn");
+      if (testBtn) testBtn.style.display = "none";
+    }, 3000);
+  };
+
+  document.getElementById("closePopup").onclick = function() {
+    const popup = document.getElementById("popupReklam");
+    popup.style.animation = 'fadeOut 0.5s ease forwards';
+    setTimeout(() => {
+      popup.style.display = "none";
+      document.body.style.overflow = "";
+
+      // Butonu geri göstər
+      const testBtn = document.getElementById("onlineTestBtn");
+      if (testBtn) testBtn.style.display = "flex";
+    }, 500);
+  };
+	</script>
 </body>
 
 
