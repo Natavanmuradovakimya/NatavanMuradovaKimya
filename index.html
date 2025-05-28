@@ -954,6 +954,24 @@
   });
 </script>
 
+	<!-- Popup Reklam Div-i -->
+<div id="reklam" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center; flex-direction:column;">
+  <div id="closeBtn" style="position:absolute; top:20px; right:20px; font-size:28px; color:white; background:rgba(0,0,0,0.5); border-radius:50%; width:40px; height:40px; line-height:40px; text-align:center; cursor:pointer;">×</div>
+  <img src="https://i.imgur.com/Ec4ovEh.png" alt="Reklam" style="max-width:90%; max-height:70%; border-radius:10px; box-shadow:0 0 15px 5px rgba(255,255,255,0.8);">
+  <a href="https://wa.me/994708348660" target="_blank" style="margin-top:20px; background-color:#f39c12; color:white; padding:14px 28px; font-size:20px; font-weight:700; border-radius:30px; text-decoration:none; box-shadow:0 0 10px rgba(0,0,0,0.4);">Əla Təklif! Dərhal Əlaqə Saxla 🚀</a>
+</div>
+
+<script>
+  window.onload = function() {
+    setTimeout(() => {
+      document.getElementById('reklam').style.display = 'flex';
+    }, 3000);
+  };
+  
+  document.getElementById('closeBtn').addEventListener('click', () => {
+    document.getElementById('reklam').style.display = 'none';
+  });
+</script>
 </body>
 
 
